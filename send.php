@@ -15,6 +15,7 @@ $user_phone = htmlspecialchars($_POST['phone'], NULL, 'utf-8');
 $messaga = htmlspecialchars($_POST['messaga'], NULL, 'utf-8');
 $email = htmlspecialchars($_POST['email'], NULL, 'utf-8');
 $form_name = htmlspecialchars($_POST['comagic'], NULL, 'utf-8');
+$shtuk = htmlspecialchars($_POST['shtuk'], NULL, 'utf-8');
 
 
 $where = htmlspecialchars($_POST['where']);
@@ -34,7 +35,7 @@ $phrase = urldecode($where);
 
   $to  = 'vitaminiby@ya.ru'; 
  //$klient  = 'panaramaservis@gmail.com,375296391118@sms.velcom.by'; //
-$subject = 'окна-с-фабрики - '.$phone.'';
+$subject = 'окна-с-фабрики.назаказ - '.$phone.'';
 $from = "$name";
 // текст письма
 $message = '
@@ -46,6 +47,7 @@ $message = '
 	<body>
 <p><strong> &nbsp;</strong> '.$email.'</p>
 <p><strong></strong> '.$form_name.'</p>
+<p>количество<strong></strong> '.$shtuk.'</p>
 <p><strong></strong> '.$user_name.'</p>
 <p><strong></strong> '.$user_name2.'</p>
 <p><strong></strong> '.$user_phone.'</p>
@@ -81,6 +83,8 @@ $messageklient = '
 	</head>
 	<body>
 <p><strong> &nbsp;</strong> '.$email.'</p>
+<p><strong></strong> '.$form_name.'</p>
+<p>количество<strong></strong> '.$shtuk.'</p>
 <p><strong></strong> '.$user_name.'</p>
 <p><strong></strong> '.$user_name2.'</p>
 <p><strong></strong> '.$user_phone.'</p>
