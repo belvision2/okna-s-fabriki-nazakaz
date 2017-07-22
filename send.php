@@ -6,7 +6,7 @@ $ipl = "http://ipgeobase.ru/?address=";
 
 $referer2 = $_SERVER['HTTP_REFERER'];
 $referer5 = $_SERVER['HTTP_REFERER'];
-$referer2 = urldecode($referer2); 
+$referer2 = urldecode($referer2);
 $referer2 = substr($referer2, 7, 20);
 
 $user_name = htmlspecialchars($_POST['name'], NULL, 'utf-8');
@@ -21,7 +21,7 @@ $shtuk = htmlspecialchars($_POST['shtuk'], NULL, 'utf-8');
 $where = htmlspecialchars($_POST['where']);
 $where2 = substr($where, 7, 16);
 $where3 = substr($where, 50, 70);
-$where3 = urldecode($where3); 
+$where3 = urldecode($where3);
 $ref = $_SERVER['HTTP_REFERER'];
 parse_str($ref, $output);
 $slova = $output['utm_term'];  // ключевые слова
@@ -30,11 +30,11 @@ $p = $output['utm_source']; // название поисковика
 $zagolovok = $output['utm_medium']; // заголовок обьявления
 $text = $output['utm_text']; // текст обьявления 1
 $text2 = $output['utm_text2']; // текст обьявления 2
-$phrase = urldecode($where); 
+$phrase = urldecode($where);
 
 
-  $to  = 'vitaminiby@ya.ru'; 
- //$klient  = 'panaramaservis@gmail.com,375296391118@sms.velcom.by'; //
+  $to  = 'vitaminiby@ya.ru';
+ //$klient  = 'omegar@tut.by,375296391118@sms.velcom.by'; //
 $subject = 'окна-с-фабрики.назаказ - '.$phone.'';
 $from = "$name";
 // текст письма
@@ -42,7 +42,7 @@ $message = '
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
+
 	</head>
 	<body>
 <p><strong> &nbsp;</strong> '.$email.'</p>
@@ -79,7 +79,7 @@ $messageklient = '
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
+
 	</head>
 	<body>
 <p><strong> &nbsp;</strong> '.$email.'</p>
