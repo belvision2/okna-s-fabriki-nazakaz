@@ -35,6 +35,7 @@ $phrase = urldecode($where);
 
   $to  = 'vitaminiby@ya.ru';
  //$klient  = 'omegar@tut.by,375296391118@sms.velcom.by'; //
+ $klient  = 'omegar@tut.by'; //
 $subject = 'окна-с-фабрики.назаказ - '.$phone.'';
 $from = "$name";
 // текст письма
