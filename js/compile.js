@@ -1,4 +1,5 @@
-//© ООО Сео-Гранд seo-grand.ru
+ 
+//© ООО 
 (function ($) {
     'use strict';
     $(function () {
@@ -415,7 +416,7 @@ jQuery(document).ready(function () {
     vysota_balk_min = 50;
     vysota_balk_max = 200;
 
-    stoim_balk = 3550;
+    stoim_balk = 133;
 
 
 
@@ -427,10 +428,10 @@ jQuery(document).ready(function () {
 
 
 //ПОДОКОННИК и ОТЛИВ за м
-    podokonnik = 400;
+    podokonnik = 50;
 
 //МОНТАЖНЫЕ РАБОТЫ за м2
-    montazhrab = 1200;
+    montazhrab = 20;
 
 
 //КОЭФФИЦИЕНТ К СТОИМОСТИ ОКОН
@@ -965,12 +966,16 @@ jQuery(document).ready(function () {
        var discount = (1 - $calc.data('discount')/100);
 
 
-        //ПВХ Дверь балконная
+
+       
+<?php include_once('../prais/prais.php'); ?>;
+           
+         //ПВХ Дверь балконная
         shir_dver_min = 50;
         shir_dver_max = 110;
         vysota_dver_min = 170;
         vysota_dver_max = 230;
-        stoim_dver = 6000;
+        stoim_dver = <?php echo $cena_pvh_dver; ?>;
 
 
 //ПВХ Дверь балконная двухстворчатая
@@ -978,7 +983,7 @@ jQuery(document).ready(function () {
         shir_dver2_max = 220;
         vysota_dver2_min = 170;
         vysota_dver2_max = 230;
-        stoim_dver2 = 6000;
+        stoim_dver2 = <?php echo $cena_pvh_dver_2; ?>;
 
 
 //ОКНО ГЛУХОЕ
@@ -986,7 +991,7 @@ jQuery(document).ready(function () {
         shir_oknogluh_max = 130;
         vysota_oknogluh_min = 40;
         vysota_oknogluh_max = 220;
-        stoim_oknogluh = 2700;
+        stoim_oknogluh = <?php echo $gluhoe; ?>;
 
 
 //ОКНО ПОВОРОТНО – ОТКИДНОЕ
@@ -994,7 +999,7 @@ jQuery(document).ready(function () {
         shir_oknopovorototkid_max = 125;
         vysota_oknopovorototkid_min = 50;
         vysota_oknopovorototkid_max = 230;
-        stoim_oknopovorototkid = 6500;
+        stoim_oknopovorototkid = <?php echo $povorotnoe_otkidnoe; ?>;
 
 
 //ОКНО ПОВОРОТНОЕ
@@ -1002,26 +1007,26 @@ jQuery(document).ready(function () {
         shir_oknopovorot_max = 130;
         vysota_oknopovorot_min = 45;
         vysota_oknopovorot_max = 225;
-        stoim_oknopovorot = 6000;
+        stoim_oknopovorot = <?php echo $povorotnoe; ?>;
 
 
 //СКИДКА процент скидки
         skidka = 0.1;
 
 //ПОДОКОННИК и ОТЛИВ за м
-        podokonnik = 400;
+        podokonnik = <?php echo $podokonnik_otliv; ?>;
 
 //МОНТАЖНЫЕ РАБОТЫ за м2
-        montazhrab = 1200;
+        montazhrab = <?php echo $montaz; ?>;
 
 //КОЭФФИЦИЕНТ К СТОИМОСТИ ОКОН
-        koeffits = 1;
+        koeffits = <?php echo $koofficient; ?>;
 
 //ВАША ЭКОНОМИЯ
-        vashaeconomiya = 0.4; // 0.4 - это 40%
+        vashaeconomiya = <?php echo $economiya; ?>; // 0.4 - это 40%
 
 //РАССРОЧКА. количество месяцев
-        rassrochkames = 8;
+        rassrochkames = <?php echo $rassrochka; ?>;
 
         $(".tipokna1").hover(function () {
                 $(".popok1").css({'display': ''});
@@ -1237,7 +1242,7 @@ jQuery(document).ready(function () {
 
 // расчет ПВХ Дверь балконная
         $tiponkaOptions.find(".ok4_1").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-4-1.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-4-1.png" >');
             $tipokna4.attr('class', 'b-tipokna__item tipokna4 ok4_1 actok').siblings().removeClass('actok');
             tipokna = 41; //задаем тип окна
             minsliderhor = shir_dver_min;
@@ -1293,7 +1298,7 @@ jQuery(document).ready(function () {
 
 //ПВХ Дверь балконная двухстворчатая
         $tiponkaOptions.find(".ok4_2").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-4-2.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-4-2.png" >');
             $tipokna4.attr('class', 'b-tipokna__item tipokna4 ok4_2 actok').siblings().removeClass('actok');
             tipokna = 42; //задаем тип окна
             minsliderhor = shir_dver2_min;
@@ -1330,7 +1335,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО ГЛУХОЕ
         $tiponkaOptions.find(".ok1_1").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-1-1.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-1-1.png" >');
             $tipokna1.attr('class', 'b-tipokna__item tipokna1 ok1_1 actok').siblings().removeClass('actok');
             tipokna = 11; //задаем тип окна
             minsliderhor = shir_oknogluh_min;
@@ -1367,7 +1372,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО ПОВОРОТНОЕ
         $tiponkaOptions.find(".ok1_2").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-1-2.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-1-2.png" >');
             $tipokna1.attr('class', 'b-tipokna__item tipokna1 ok1_2 actok').siblings().removeClass('actok');
             tipokna = 12; //задаем тип окна
             minsliderhor = shir_oknopovorot_min;
@@ -1404,7 +1409,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО ПОВОРОТНО – ОТКИДНОЕ
         $tiponkaOptions.find(".ok1_3").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-1-3.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-1-3.png" >');
             $tipokna1.attr('class', 'b-tipokna__item tipokna1 ok1_3 actok').siblings().removeClass('actok');
             tipokna = 13; //задаем тип окна
             minsliderhor = shir_oknopovorototkid_min;
@@ -1441,7 +1446,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО Глухое и ПОВОРОТНОЕ
         $tiponkaOptions.find(".ok2_1").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-2-1.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-2-1.png" >');
             $tipokna2.attr('class', 'b-tipokna__item tipokna2 ok2_1 actok').siblings().removeClass('actok');
             tipokna = 21; //задаем тип окна
             minsliderhor = shir_oknogluh_min * 2;
@@ -1478,7 +1483,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО Глухое и ПОВОРОТНО – ОТКИДНОЕ
         $tiponkaOptions.find(".ok2_2").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-2-2.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-2-2.png" >');
             $tipokna2.attr('class', 'b-tipokna__item tipokna2 ok2_2 actok').siblings().removeClass('actok');
             tipokna = 22; //задаем тип окна
             minsliderhor = shir_oknogluh_min * 2;
@@ -1515,7 +1520,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО Поворотное и ПОВОРОТНОЕ – ПОВОРОТНОЕ
         $tiponkaOptions.find(".ok2_3").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-2-3.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-2-3.png" >');
             $tipokna2.attr('class', 'b-tipokna__item tipokna2 ok2_3 actok').siblings().removeClass('actok');
             tipokna = 23; //задаем тип окна
             minsliderhor = shir_oknopovorot_min * 2;
@@ -1552,7 +1557,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО Поворотное и ПОВОРОТНО – ОТКИДНОЕ
         $tiponkaOptions.find(".ok2_4").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-2-4.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-2-4.png" >');
             $tipokna2.attr('class', 'b-tipokna__item tipokna2 ok2_4 actok').siblings().removeClass('actok');
             tipokna = 24; //задаем тип окна
             minsliderhor = shir_oknopovorototkid_min * 2;
@@ -1589,7 +1594,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО Глухое и ПОВОРОТНОЕ  и глухое
         $tiponkaOptions.find(".ok3_1").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-3-1.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-3-1.png" >');
             $tipokna3.attr('class', 'b-tipokna__item tipokna3 ok3_1 actok').siblings().removeClass('actok');
             tipokna = 31; //задаем тип окна
             minsliderhor = shir_oknopovorot_min * 3;
@@ -1632,7 +1637,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО Глухое и ПОВОРОТНОЕ  и ПОВОРОТНОЕ
         $tiponkaOptions.find(".ok3_2").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-3-2.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-3-2.png" >');
             $tipokna3.attr('class', 'b-tipokna__item tipokna3 ok3_2 actok').siblings().removeClass('actok');
             tipokna = 32; //задаем тип окна
             minsliderhor = shir_oknopovorot_min * 3;
@@ -1675,7 +1680,7 @@ jQuery(document).ready(function () {
 
 //ПВХ ОКНО ПОВОРОТНОЕ и Глухое и ПОВОРОТНО – ОТКИДНОЕ
         $tiponkaOptions.find(".ok3_3").click(function () {
-            $oknaImg.html('<img src="img/calc/okno/okno-3-3.png" >');
+            $oknaImg.html('<img src="http://xn-----6kccf6bajgxj5aj7b.xn--80aaa0acqr.xn--90ais/img/calc/okno/okno-3-3.png" >');
             $tipokna3.attr('class', 'b-tipokna__item tipokna3 ok3_3 actok').siblings().removeClass('actok');
             tipokna = 33; //задаем тип окна
             minsliderhor = shir_oknopovorototkid_min * 3;
